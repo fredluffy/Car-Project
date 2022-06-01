@@ -1,0 +1,29 @@
+%border-mains{
+    border: $F-border;
+    border-radius: $F-rounded;
+}
+%between-center{
+    justify-content: space-between;
+    align-items: center;
+}
+%around-center{
+    justify-content: space-around;
+    align-items: center;
+}
+%row-nowrap{
+    display: flex;
+    flex-flow: row nowrap;
+}
+%column-nowrap{
+    display: flex;
+    flex-flow: column nowrap;
+}
+%span-before{
+    content: "";
+    display: inline-block;
+    border-radius: 10px;
+    width: 30px;
+    height: 5px;
+    vertical-align: middle;
+    background-color: lighten($color: $F-bgsecondary, $amount: 20%);
+}

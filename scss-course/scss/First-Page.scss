@@ -1,0 +1,221 @@
+@import "variables";
+@import "general";
+@import "placeholders";
+@import "responsive";
+@import "classes";
+
+        
+/*header-navbar*/
+#header-navbar{
+    position: fixed;
+    top: 0;
+    padding: 0;
+    z-index: 10;
+    .top-menu{
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 5%;
+        .left-list{
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: space-around;
+            .lists{
+                a{
+                    text-decoration: none;
+                    color: $F-bgprimary;
+                }
+            }
+        }
+        .right-list{
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: space-between;
+            padding-right: 1.5rem;
+            direction: rtl;
+            .searchbox{
+                position: relative;
+                input{
+                    background-color: $F-bgtertiary;
+                    opacity: .8;
+                    border: none;
+                    border-radius: 10px;
+                    padding: 0 1ch;
+                    height: 100%;
+                    direction: ltr;
+                    &:focus{
+                        // border: none !important;
+                        outline: none;
+                    }
+                }
+                span{
+                    position: absolute;
+                    right: .5rem;
+                    font-size: $F-txt-size-secondary;
+                    cursor: pointer;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+}
+.ham-nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 101;
+    backdrop-filter: blur(5px);
+    .hamburger-box{
+        button{
+            &:focus{
+                box-shadow: none;
+            }
+        }
+    }
+    .ham-menu-box{
+        width: 8vw;
+        .ham-menu{
+            ul{
+                margin: 3rem .75rem;
+                padding: 0;
+                list-style: none;
+                li a{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .circles{
+        position: absolute;
+        top: 35vh;
+        left: .5rem;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto auto auto;
+        justify-content: space-evenly;
+        align-items: center;
+        row-gap: .2rem;
+        padding: .25rem;
+        .big-dots{
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 1px solid $F-bgquaternary;
+        }
+        .small-dots{
+            margin: .15rem;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            border: 1px solid $F-bgquaternary;
+        }
+        .center-dot{
+            background-color: aliceblue;
+            outline: 2px solid $F-bgquinary;
+            outline-offset: 3px;
+            cursor: pointer;
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+    }
+    .brand{
+        position: absolute;
+        bottom: 3rem;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        width: 100%;
+        cursor: pointer;
+        // animation-name: f-rotate;
+        // animation-duration: 4s;
+        animation: f-rotate 5s linear infinite ;
+        .img-box{
+            width: 50%;
+        }
+        img{
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: $F-rounded;
+        }
+        @keyframes f-rotate {
+            from {transform: rotate(0deg);}
+            to {transform: rotate(360deg);}
+          }
+          
+    }
+}
+
+
+
+
+
+
+
+
+
+
+#header-carousel{
+    .carousel-indicators{
+        button{
+            border-radius: 50%;
+            background-color: $F-bgsecondary !important;
+            height: 15px !important;
+            width: 15px !important;
+        }
+    }
+    .carousel-control-prev , .carousel-control-next{
+        height: max-content;
+        width: max-content;
+        top: 80%;
+        border-radius: 50%;
+        &:hover{box-shadow: 0 0 5px 5px skyblue;}
+    }
+    .carousel-control-prev{
+        left: 90%;
+    }
+    .carousel-control-next{
+        right: 5%;
+    }
+    .carousel-item{
+        height: 100vh;
+    }
+    /* Carousels Common Section
+    * --------------------------------------- */
+    #page1-1 ,#page1-2, #page1-3{
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    /* carousel page1-1
+        * --------------------------------------- */
+    #page1-1{
+        background-image: url(/Images/Cover/Nature-C/avstriia-almsee-les-gory-skaly-derevia-ozero-sineva.jpg);
+    }
+
+    /* carousel page1-2
+        * --------------------------------------- */
+    #page1-2{
+        background-image: url(/Images/Cover/Nature-C/belgiia-osen-ozero-derevo.jpg);
+    }
+
+    /* carousel page1-3
+        * --------------------------------------- */
+    #page1-3{
+        background-image: url(/Images/Cover/Nature-C/croatian-boat-scenery-wallpaper.jpg);
+    }
+
+}
+
+
+
+
+
+
+            // font-size: 5em;
+            // font-family: arial,helvetica;
